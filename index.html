@@ -3,37 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>My Bio Data</title>
-    <!-- Add custom styles if desired -->
     <link rel="stylesheet" href="data.css">
 </head>
+
 <body>
-    <div class="bio-data">
-        <h1>My Bio Data</h1>
-        <p><strong>Name:</strong> Vaishnavi N</p>
-        <p><strong>Age:</strong> 20 years old</p>
-        <p><strong>Occupation:</strong> Student</p>
-        <p><strong>Location:</strong> Karur,TamilNadu</p>
-        <p><strong>Email:</strong> shalluvaishnavi@gmail.com</p>
-        <p><strong>Phone Number:</strong> 9566824903</p>
-        <hr />
-        <p><strong>Educational Background:</strong></p>
-        <ul>
-            <li><strong>Degree:</strong> Bachelor of Technology in Artificial Intelligence and Machine Learning</li>
-            <li><strong>University:</strong> Anna University</li>
-            <li><strong>Graduation Year:</strong> 2025</li>
-        </ul>
-        <hr />
-        <p><strong>Skills:</strong></p>
-        <ul>
-            <li><strong>Technical Skills:</strong> Python, html, C++</li>
-             <li><strong>Soft Skills:</strong> Good Communication, Leadership Quality, Time Management</li>
-        </ul>
-        <hr />
-        <p><strong>Languages Known:</strong></p>
-        <ul>
-            <li><strong>To Read,Write,Speak:</strong> Tamil, English</li>
-            <li><strong>To Speak:</strong> Telugu, Kannada</li>
-        </ul>
-    </div>
+
+<div class="container">
+
+    <h1>My Bio Data</h1>
+
+    <p><strong>Name:</strong> Vaishnavi N</p>
+    <p><strong>Age:</strong> 20 years old</p>
+    <p><strong>Occupation:</strong> <span class="typing"></span></p>
+    <p><strong>Location:</strong> Karur, Tamil Nadu</p>
+    <p><strong>Email:</strong> shaluvashnavi@gmail.com</p>
+    <p><strong>Phone:</strong> 9566824903</p>
+
+    <hr>
+
+    <h3>Educational Background</h3>
+    <ul>
+        <li>Bachelor of Technology in Artificial Intelligence and Machine Learning</li>
+        <li>University: Anna University</li>
+        <li>Graduation Year: 2025</li>
+        <li>CGPA: 8.5</li>
+    </ul>
+
+    <hr>
+
+    <h3>Technical Skills</h3>
+
+    <p>Python</p>
+    <div class="skill-bar"><div class="skill-fill" id="python"></div></div>
+
+    <p>HTML & CSS</p>
+    <div class="skill-bar"><div class="skill-fill" id="html"></div></div>
+
+    <p>JavaScript</p>
+    <div class="skill-bar"><div class="skill-fill" id="js"></div></div>
+
+    <p>C++</p>
+    <div class="skill-bar"><div class="skill-fill" id="cpp"></div></div>
+
+    <hr>
+
+    <h3>Soft Skills</h3>
+    <ul>
+        <li>Good Communication</li>
+        <li>Leadership Quality</li>
+        <li>Time Management</li>
+        <li>Problem Solving</li>
+        <li>Team Collaboration</li>
+    </ul>
+
+    <hr>
+
+    <h3>Languages Known</h3>
+    <ul>
+        <li>Read, Write, Speak: Tamil, English</li>
+        <li>Speak: Telugu, Kannada</li>
+    </ul>
+
+    <hr>
+
+    <h3>Projects</h3>
+    <ul>
+        <li>AI-Based Anomaly Detection System</li>
+        <li>Internship Tracking Platform</li>
+        <li>Portfolio Website Development</li>
+    </ul>
+
+    <button class="btn" onclick="showMessage()">Contact Me</button>
+
+</div>
+
+<script>
+    const text = "Student | AI & ML Enthusiast";
+    let i = 0;
+
+    function typingEffect() {
+        if (i < text.length) {
+            document.querySelector(".typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typingEffect, 100);
+        }
+    }
+
+    typingEffect();
+
+    window.onload = function() {
+        document.getElementById("python").style.width = "90%";
+        document.getElementById("html").style.width = "85%";
+        document.getElementById("js").style.width = "75%";
+        document.getElementById("cpp").style.width = "70%";
+    };
+
+    function showMessage() {
+        alert("Thank you for visiting my profile!");
+    }
+</script>
+
 </body>
 </html>

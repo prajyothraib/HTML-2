@@ -1,26 +1,78 @@
-body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #dfbbbb;
-            background-image: url('C:\Users\ELCOT\Downloads\bg 1.jpg');
-            margin: 10px;
-            border: double purple 10px;
-            padding: 10px;
-        }
-        
-        h1 {
-            text-align: center;
-        }
-    
-        .bio-data {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #68a1c7;
-            background-image: url('C:\Users\ELCOT\Downloads\bg 1.jpg');
-            padding: 20px;
-            border:  10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
 
-        ul li{
-            line-height: 25px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+    background-size: 200% 200%;
+    animation: bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+
+.container {
+    width: 60%;
+    margin: 50px auto;
+    background: #5f9ec9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid white;
+    margin: 20px 0;
+}
+.skill-bar {
+    background: #ddd;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.skill-fill {
+    height: 20px;
+    background: #00ffcc;
+    width: 0;
+    border-radius: 20px;
+    transition: width 2s ease-in-out;
+}
+
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+
+
+.typing {
+    color: yellow;
+    font-weight: bold;
+}
